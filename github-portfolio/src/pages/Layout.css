@@ -1,0 +1,72 @@
+.navbar {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.navbar-brand{
+color: #ccc;
+    font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+}
+
+.navbar-brand:hover {
+    color: #ccc;
+    /* Lighter color on hover */
+    text-decoration: none;
+    /* Remove underline on hover */
+}
+
+/* Ensure the nav-items are horizontally displayed by default */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    /* This will center the items */
+}
+
+.nav-link {
+    display: flex;
+    /* Ensures links are aligned horizontally */
+    padding: 0.5rem 1rem;
+    /* Standard padding for nav links */
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #cccccc;
+    /* Lighter grey for hover state */
+}
+
+.nav-item {
+    display: inline-flex;
+    /* Align items horizontally */
+    margin-right: 50px;
+    /* Space between items */
+    margin-left: 15px;
+    
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+
+    .navbar-nav {
+        flex-direction: column;
+        /* Stack vertically on smaller screens */
+        justify-content: center;
+        /* Centers nav-items in the nav */
+    }
+
+    .nav-item {
+        display: block;
+        /* Stack items vertically when navbar collapses */
+    }
+}
