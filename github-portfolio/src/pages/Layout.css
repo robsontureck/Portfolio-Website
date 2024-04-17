@@ -24,7 +24,7 @@ color: #ccc;
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: right;
     /* This will center the items */
 }
 

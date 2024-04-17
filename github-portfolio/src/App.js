@@ -17,7 +17,10 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="resume" element={<Resume />} />
-            <Route path="portfolio" element={<Portfolio />} />
+            <Route
+              path="portfolio"
+              element={<Portfolio username="robsontureck" />}
+            />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
