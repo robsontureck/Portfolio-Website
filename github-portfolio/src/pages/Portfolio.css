@@ -1,4 +1,6 @@
+
 .centered-container {
+    color: white;
     display: flex;
     justify-content: center; 
 }
@@ -17,11 +19,15 @@
 }
 
 .repos-container{
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: white;
     /* Ensures that items are spaced evenly on the main-axis */
+    
 }
+
 
 @media (max-width: 600px) {
     .repos-container {

@@ -1,0 +1,92 @@
+/* Home.css - Update your CSS file with these styles */
+
+.container {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-around;
+    /* Distribute space evenly between children */
+    height: 93vh;
+    /* Optional: Set the height of the container to full viewport height for vertical centering */
+}
+.hero-image {
+    width: 400px;
+    /* Sets the width of the hero image */
+    height: 400px;
+    /* Sets the height of the hero image */
+    border-radius: 50%;
+    /* Makes the hero image circular */
+    object-fit: contain;
+    /* Ensures the image covers the area without being stretched */
+    margin-right: 300px;
+    /* Adds space between the image and the text */
+    flex-shrink: 0;
+    
+}
+
+.home-message {
+    flex-grow: 1;
+    /* Limits the width of the text block */
+    color: white;
+    /* Sets the text color to white */
+    text-align: center;
+    min-width: 300px;
+        /* Ensures the container does not shrink below this width */
+    max-width: 800px;
+        /* Ensures the container does not grow beyond this width */
+}
+
+h1{
+    font-size: 50px;
+}
+
+h1,
+h2 {
+    margin: 0 0 20px 0;
+    /* Adds space between the h1 and h2 elements */
+    padding: 0;
+    /* Removes any default padding */
+}
+
+.typewriter-container {
+    height: 150px;
+    /* Adjust the height according to your typical content size */
+    overflow: hidden;
+    /* Hide any overflow if the text gets too large */
+    
+}
+
+@media (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+        /* Stacks the children vertically */
+        align-items: center;
+        /* Centers the items horizontally */
+        justify-content: flex-start;
+        /* Aligns items to the top of the container */
+    }
+
+    .hero-image {
+        margin-right: 0;
+        /* Removes the right margin on smaller screens */
+        margin-bottom: 20px;
+        /* Adds space below the image when stacked */
+       
+    }
+        .home-message {
+            margin-left: 0;
+            /* Remove margin for smaller screens */
+            min-width: 0;
+            /* Allow shrinking on small devices */
+        }
+}
+
+.cursor {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

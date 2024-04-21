@@ -32,12 +32,14 @@ const RepositoryCard = ({ repo }) => {
   return (
     <div
       style={{
+        background: "black",
         border: "1px solid #ddd",
         padding: "20px",
         margin: "10px",
         flexBasis: "calc(50% - 20px)", // Adjusting width for two cards per row minus margin
         boxSizing: "border-box",
         boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+        borderRadius: "20px",
       }}
     >
       <img

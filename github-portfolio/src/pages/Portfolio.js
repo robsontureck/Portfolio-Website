@@ -24,7 +24,9 @@ const Portfolio = ({ username }) => {
   return (
     <div>
       <div className="centered-container">
-        <h1>Repositories for {username}</h1>
+        <h1>
+          My <span style={{ color: "red" }}>Portfolio</span>
+        </h1>
       </div>
       <div className="input-container">
         <input
