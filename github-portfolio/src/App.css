@@ -1,7 +1,35 @@
 body {
-    background-image: url('../public/black.avif');
+    background-image: url('../public/background-blue.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 855px;
+    
+    
+}
+
+
+.footer {
+    padding: 5px 0;
+    background-color: white;
+    /* Light gray background, change as needed */
+    border-top: 5px solid #e7e7e7;
+    /* Subtle top border */
+    bottom: 0;
+}
+
+
+.social-icon {
+    margin: 0 15px;
+    color: #333;
+    /* Default icon color */
+}
+
+.social-icon:hover {
+    color: #0056b3;
+    /* Color on hover */
+}
+
+.padding-top {
+    padding-top: 10px;
+    /* Adjust the padding as needed */
 }

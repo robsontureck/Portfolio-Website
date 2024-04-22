@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import NoPage from "./pages/NoPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

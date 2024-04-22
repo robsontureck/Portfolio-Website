@@ -1,20 +1,13 @@
-.background {
-    background-image: url('../../public/black.avif');
-    /* Ensure the path is correct */
-    background-size: cover;
-    /* Ensures the background image covers the entire container */
-    background-position: center top;
-    /* Centers the background image vertically at the top */
-    background-repeat: no-repeat;
-    /* Prevents the background image from repeating */
-    min-height: 855px;
-    /* Sets a minimum height to ensure the image is visible */
-    display: flex;
-    /* Establishes a flex container */
-    align-items: center;
-    /* Vertically centers the flex items */
-    justify-content: center;
-    /* Horizontally centers the flex items */
-    padding: 100px;
-    /* Adds padding around the container */
+
+
+.intro-message{
+    color: white;
+    font-size: 80px;
+    
+}
+
+.about{
+    color: white;
+    font-size: 20px; 
+    font: bolder;
 }
