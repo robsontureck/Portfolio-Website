@@ -1,8 +1,19 @@
-
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 90vh;
+    /* Center items vertically */
+    
+    /* Distribute space evenly between children */
+    
+    /* Optional: Set the height of the container to full viewport height for vertical centering */
+}
 
 .intro-message{
     color: white;
     font-size: 80px;
+    
     
 }
 
@@ -10,4 +21,6 @@
     color: white;
     font-size: 20px; 
     font: bolder;
+    text-align: justify;
+    padding-bottom: 60px;
 }

@@ -1,12 +1,12 @@
 /* Home.css - Update your CSS file with these styles */
 
-.container {
+.home-container {
     display: flex;
     align-items: center;
     /* Center items vertically */
     justify-content: space-around;
     /* Distribute space evenly between children */
-    height: 93vh;
+    min-height: 87vh;
     /* Optional: Set the height of the container to full viewport height for vertical centering */
 }
 .hero-image {
@@ -57,7 +57,7 @@ h2 {
 }
 
 @media (max-width: 1100px) {
-    .container {
+    .home-container {
         flex-direction: column;
         /* Stacks the children vertically */
         align-items: center;

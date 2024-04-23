@@ -1,20 +1,20 @@
 body {
-    background-image: url('../public/background-blue.avif');
+    background-image: url('../public/black.avif');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    
-    
+    background-repeat: no-repeat; 
+    height: 100%;
 }
 
 
 .footer {
+    position: sticky;
+    text-align: center;
     padding: 5px 0;
-    background-color: white;
-    /* Light gray background, change as needed */
-    border-top: 5px solid #e7e7e7;
-    /* Subtle top border */
+    width: 100%;
+    background-color: rgb(0, 0, 0);
     bottom: 0;
+    
 }
 
 
@@ -30,6 +30,6 @@ body {
 }
 
 .padding-top {
-    padding-top: 10px;
+    padding-top: 100px;
     /* Adjust the padding as needed */
 }

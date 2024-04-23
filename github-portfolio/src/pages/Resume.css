@@ -1,0 +1,143 @@
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.summary{
+    padding-top: 50px;
+    padding-left: 100px;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    display: flex;
+        /* Enables Flexbox for this container */
+        flex-direction: column;
+        /* Stack children vertically */
+        justify-content: center;
+        /* Center children vertically in the container */
+}
+
+.button-center {
+    width: auto;
+    max-width: 200px;
+    /* Adjust as needed */
+    display: block;
+    margin: 0 auto;
+    /* Centers the button horizontally */
+}
+
+.resume-image{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 15px;
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    justify-content: center;
+    border: 2px solid #333;
+        /* Solid border */
+        box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.1);
+        /* Drop shadow */
+}
+
+.resume-title{
+    margin-top: 50px;
+    font-size: 50px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    /* Distribute space evenly around the items */
+    flex-wrap: wrap;
+    /* Allow items to wrap in small screens */
+    padding: 20px;
+    /* Light grey background */
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.skills-container svg {
+    margin: 12px;
+    /* Spacing around icons */
+    color: #d2c9c9;
+    /* Icon color */
+}
+
+.qualifications{
+    margin-top: 50px;
+    font-size: 50px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    color: white;  
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card {
+    margin: 10px;
+    min-height: 170px;
+    /* Adds space between cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height {
+    display: flex;
+}
+
+.card-img-left {
+    width: 120px;
+        /* Example fixed width */
+        height: 120px;
+        /* Example fixed height */
+        display: flex;
+        /* Use flexbox for centering the image */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        overflow: hidden;
+        /* Hide overflow */
+}
+
+.card-img-left img {
+    width: 100%;
+    height: auto;
+    /* Adjust height to maintain aspect ratio */
+}
+
+.flex-row {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.card-body {
+    
+    align-items: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 0.25rem;
+    /* Reduces space between text lines for compactness */
+}
+
+@media (max-width: 768px) {
+    .summary {
+        padding-left: 10px;
+        /* Reduces padding on smaller screens for better space usage */
+    }
+
+        .flex-row {
+            flex-direction: column;
+        }
+    
+}

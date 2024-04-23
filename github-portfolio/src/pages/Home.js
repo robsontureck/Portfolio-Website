@@ -1,5 +1,6 @@
 import "./Home.css";
 import Typewriter from "../components/Typewriter";
+import heroImage from "../Images/hero.jpeg";
 
 const Home = () => {
   const messages = [
@@ -7,8 +8,8 @@ const Home = () => {
     "Explore my portfolio and projects.",
   ];
   return (
-    <div className="container">
-      <img src="/hero.jpeg" alt="Robson" className="hero-image" />
+    <div className="home-container">
+      <img src={heroImage} alt="Robson" className="hero-image" />
       <div className="home-message">
         <h1>Hi, I'm Robson.</h1>
 
