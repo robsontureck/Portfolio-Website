@@ -15,6 +15,7 @@ async function getUserRepos(username, token) {
 
   const data = await response.json();
   let repos = data.map((repo) => ({
+    id: repo.id,
     name: repo.name.replace(/-/g, " "), // Replace dashes with spaces
     description: repo.description,
     language: repo.language || "Not Specified",
@@ -23,7 +24,7 @@ async function getUserRepos(username, token) {
     url: repo.html_url,
     stars: repo.stargazers_count,
   }));
-  console.log(repos);
+
   return repos;
 }
 

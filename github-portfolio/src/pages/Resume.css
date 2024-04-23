@@ -84,6 +84,15 @@
     /* Adds space between cards */
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 80px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slightly scale up the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: add shadow for better effect */
 }
 
 .equal-height {

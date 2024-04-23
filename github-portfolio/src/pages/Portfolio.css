@@ -18,18 +18,33 @@
     width: 300px;
 }
 
-.repos-container{
-    
+.repos-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    color: white;
-    /* Ensures that items are spaced evenly on the main-axis */
+    justify-content: space-around;
+    align-items: flex-start;
+        /* Keeps items aligned at the top */
+    margin-bottom: 50px;
+    justify-content: center;
+    /* This helps distribute space evenly around each card */
+    
+    /* Aligns items at the start of the flex container */
+    
+    /* Provides space between items, adjust as needed */
+}
+.card-custom {
+    width: 20rem;
+    /* Or any other width, defined in CSS for better control */
+    margin: auto;
+    margin-bottom: 30px;
+    /* Adjust margin to control spacing further */
     
 }
 
 
-@media (max-width: 600px) {
+
+
+@media (max-width: 738px) {
     .repos-container {
         justify-content: center;
         /* Center items on smaller screens */
