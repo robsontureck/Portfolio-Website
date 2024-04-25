@@ -37,15 +37,13 @@ const Portfolio = ({ username }) => {
   return (
     <div>
       <div className="centered-container">
-        <h1>
-          My <span style={{ color: "red" }}>Portfolio</span>
-        </h1>
+        <h1 className="portfolio-title">My Projects</h1>
       </div>
       <div className="input-container">
         <input
           className="search-input"
           type="text"
-          placeholder="Search by language..."
+          placeholder="Filter by language..."
           value={searchTerm}
           onChange={handleSearchChange}
         />

@@ -1,0 +1,37 @@
+/* Example custom CSS for RepoDetails */
+.repo-details {
+    padding: 20px 0;
+    color: white;
+    margin-top: 50px;
+    /* Add padding around the section for better spacing */
+}
+
+.repo-image {
+    margin-top: 50px;
+    width: 500px;
+    /* Default width */
+    height: 400px;
+    /* Default height */
+    object-fit: cover;
+    /* Adjust this to control how images are fitted to the box */
+}
+
+.repo-buttons{
+    margin-bottom: 60px;
+}
+
+.repo-video{
+    margin-bottom: 60px;
+}
+
+.repo-details .img-fluid {
+    margin-top: 50px;
+    max-height: 300px;
+    /* Limit image size */
+}
+
+.repo-details h2,
+.repo-details p {
+    margin: 10px 0;
+    /* Consistent margin for all text elements */
+}

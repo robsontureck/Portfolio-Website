@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Layout.css";
 import { Outlet, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { NavLink } from "react-router-dom";
 import {
+  Button,
   Container,
   Row,
   Col,
@@ -12,7 +14,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -34,6 +35,7 @@ const Layout = (args) => {
     setIsOpen(!isOpen);
     console.log("Is Open?", !isOpen); // Check if this logs true/false as expected when clicked
   };
+
   return (
     <>
       <Navbar expand="lg" {...args}>
@@ -42,24 +44,49 @@ const Layout = (args) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <Link className="nav-link" to="/">
+              <Button
+                color="danger"
+                tag={NavLink}
+                exact
+                to="/"
+                onClick={() => setIsOpen(false)}
+                activeClassName="active"
+              >
                 Home
-              </Link>
+              </Button>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/about">
+              <Button
+                color="danger"
+                tag={NavLink}
+                to="/about"
+                onClick={() => setIsOpen(false)}
+                activeClassName="active"
+              >
                 About
-              </Link>
+              </Button>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/resume">
+              <Button
+                color="danger"
+                tag={NavLink}
+                to="/resume"
+                onClick={() => setIsOpen(false)}
+                activeClassName="active"
+              >
                 Resume
-              </Link>
+              </Button>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/portfolio">
+              <Button
+                color="danger"
+                tag={NavLink}
+                to="/portfolio"
+                onClick={() => setIsOpen(false)}
+                activeClassName="active"
+              >
                 Portfolio
-              </Link>
+              </Button>
             </NavItem>
           </Nav>
         </Collapse>

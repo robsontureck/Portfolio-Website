@@ -1,7 +1,7 @@
 // Assuming this is in a file called fetchYouTubeVideos.js
 const fetchYouTubeVideos = async (language) => {
   const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
-  const searchQuery = `${language} programming tutorial`;
+  const searchQuery = `${language} what to know in 5min`;
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(
     searchQuery
   )}&key=${apiKey}`;

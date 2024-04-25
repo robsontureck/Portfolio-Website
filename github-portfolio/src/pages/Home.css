@@ -53,6 +53,7 @@ h2 {
     /* Adjust the height according to your typical content size */
     overflow: hidden;
     /* Hide any overflow if the text gets too large */
+    margin-bottom: 40px;
     
 }
 
