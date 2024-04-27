@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "reactstrap";
 import FetchYoutubeAPI from "../api/fetchYoutubevideos";
@@ -8,6 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const RepoDetails = () => {
+  // Set the page title using useEffect
+  useEffect(() => {
+    document.title = "Git Portfolio - Project Details";
+  }, []);
   const { repos } = useRepos();
   const { id } = useParams();
   const repo = repos?.find((repo) => repo.id.toString() === id);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRepos } from "../context/ReposContext";
 import "../styles/Portfolio.css";
@@ -15,7 +15,11 @@ import {
 const token = process.env.REACT_APP_GITHUB_TOKEN;
 
 const Portfolio = ({ username }) => {
-  //const { loading, repos, error } = useGitHubRepos(username, token);
+  // Set the page title using useEffect
+  useEffect(() => {
+    document.title = "Git Portfolio - Portfolio";
+  }, []);
+
   const { loading, repos, error } = useRepos();
   const [searchTerm, setSearchTerm] = useState("");
 

@@ -9,7 +9,7 @@
         /* Vertically center the content */
         align-items: center;
         /* Horizontally center the content */
-        height: 88vh;
+        height: 100vh;
     /* Add more styling as needed */
 }
 .centered-container {
@@ -52,7 +52,7 @@
     
     /* Or any other width, defined in CSS for better control */
     margin: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     width: 100%;
     /* Adjust margin to control spacing further */
     

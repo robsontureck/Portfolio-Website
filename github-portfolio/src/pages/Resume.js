@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../styles/Resume.css";
 import {
   Card,
@@ -13,11 +14,14 @@ import {
 import resumeImage from "../Images/resume.png";
 import qutLogo from "../Images/qut-logo.jpg";
 import ufscLogo from "../Images/ufsc-logo.png";
-
 import Skills from "../components/Skills.js";
 import { useRepos } from "../context/ReposContext";
 
 const Resume = () => {
+  // Set the page title using useEffect
+  useEffect(() => {
+    document.title = "Git Portfolio - Resume";
+  }, []);
   const { loading, repos, error } = useRepos();
   const cvFile = "resume.pdf";
   return (

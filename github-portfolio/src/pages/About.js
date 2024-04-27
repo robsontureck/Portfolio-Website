@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import "../styles/About.css";
 import { Container, Row, Col } from "reactstrap";
 
 const About = () => {
+  // Set the page title using useEffect
+  useEffect(() => {
+    document.title = "Git Portfolio- About";
+  }, []);
   return (
     <div className="about-container">
       <Container>

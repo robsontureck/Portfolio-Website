@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import "../styles/Home.css";
 import Typewriter from "../components/Typewriter";
 import heroImage from "../Images/hero.jpeg";
 
 const Home = () => {
+  // Set the page title using useEffect
+  useEffect(() => {
+    document.title = "Git Portfolio - Home";
+  }, []);
   const messages = [
     "I'm a masters student of Information Technology majoring in Software Development.",
     "Explore my portfolio and projects.",
