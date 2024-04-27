@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../styles/Home.css";
 import Typewriter from "../components/Typewriter";
 import heroImage from "../Images/hero.jpeg";
 

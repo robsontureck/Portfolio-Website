@@ -3,11 +3,13 @@
     padding: 20px 0;
     color: white;
     margin-top: 50px;
+    height: 700px;
+    width: 600px;
     /* Add padding around the section for better spacing */
 }
 
 .repo-image {
-    margin-top: 50px;
+    margin-top: 0px;
     width: 500px;
     /* Default width */
     height: 400px;
@@ -34,4 +36,10 @@
 .repo-details p {
     margin: 10px 0;
     /* Consistent margin for all text elements */
+}
+
+.error-message-details {
+    color: white; 
+    font-weight: bold;
+    font-size: 40px;
 }

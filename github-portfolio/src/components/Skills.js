@@ -19,7 +19,6 @@ const SkillIcon = ({ icon, label }) => {
   const iconStyle = {
     transform: hover ? "scale(1.3)" : "scale(1)", // Enlarges the icon by 30% on hover
     transition: "transform 0.3s ease", // Smooth transition for the transform property
-    cursor: "pointer", // Changes the cursor to a pointer to indicate it's interactive
   };
 
   return (

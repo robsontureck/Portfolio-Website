@@ -1,4 +1,17 @@
-
+.error-message-portfolio {
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Vertically center the content */
+        align-items: center;
+        /* Horizontally center the content */
+        height: 88vh;
+    /* Add more styling as needed */
+}
 .centered-container {
     display: flex;
     justify-content: center; 
@@ -32,20 +45,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-        /* Keeps items aligned at the top */
     margin-bottom: 50px;
     justify-content: center;
-    /* This helps distribute space evenly around each card */
-    
-    /* Aligns items at the start of the flex container */
-    
-    /* Provides space between items, adjust as needed */
 }
 .card-custom {
-    width: 20rem;
+    
     /* Or any other width, defined in CSS for better control */
-    margin: auto;
+    margin: 15px;
     margin-bottom: 30px;
+    width: 100%;
     /* Adjust margin to control spacing further */
     
 }

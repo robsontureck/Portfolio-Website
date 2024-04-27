@@ -22,10 +22,11 @@ Please make sure your code adheres to the existing style of the project to ensur
 
 ## Features
 
-- **Dynamic Repository Listing**: Automatically fetches and displays repositories from a specified GitHub user account.
-- **Detailed Repository Views**: Clicking on a repository card displays detailed information about the repository, such as the README file, latest commits, and contribution statistics.
-- **Language-based Filtering**: Users can filter repositories based on the programming language used.
-- **Responsive Design**: The application is fully responsive and works on mobile, tablet, and desktop views.
+- Dynamic Repository Display: Fetches and displays repositories directly from GitHub using the GitHub API.
+- Search Functionality: Allows users to filter repositories based on the programming language used.
+- Responsive Design: Adapts gracefully to different device screens to ensure a seamless user experience across desktops, tablets, and mobiles.
+- Error Handling: Gracefully handles and displays errors related to API requests or other issues.
+- Secure: Implements environment variables to manage sensitive data like API keys.
 
 ## Dependencies
 
@@ -55,9 +56,19 @@ The application uses a typical React SPA architecture structured as follows:
 - assets: Static assets like images and stylesheets.
 - public: Contains the index.html and other public assets.
 
+It has several key components:
+
+- App.js: The main component that routes to different parts of the application.
+- Layout.js: Manages the layout and navigation of the application.
+- Home.js, About.js, Resume.js, Portfolio.js: Individual pages within the application.
+- ReposContext.js: Provides a React context for state management across components.
+- GitHubAPI.js: Handles API requests to GitHub.
+- fetchYoutubeVideos.js: Manages requests to the YouTube API for related video content.
+
 ## Reporting Issues
 
 To report issues or suggest enhancements, please use the Issues section of this GitHub repository. Be sure to describe the issue or feature request in detail, and where applicable, include screenshots or code snippets that demonstrate the problem or improvement.
 
-License
+## License
+
 This project is licensed under the MIT License - see the LICENSE.md file for details.

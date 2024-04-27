@@ -1,16 +1,12 @@
-import useGitHubRepos from "../hooks/GitHubAPI";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useRepos } from "../context/ReposContext";
-import "./Portfolio.css";
+import "../styles/Portfolio.css";
 import {
-  CardGroup,
   Card,
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
-  CardText,
   Row,
   Col,
   Container,
@@ -32,7 +28,13 @@ const Portfolio = ({ username }) => {
   );
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (error)
+    return (
+      <div className="error-message-portfolio">
+        <h1>Failed to load repositories. Please try again later.</h1>
+        Error:{error}
+      </div>
+    );
 
   return (
     <div>
@@ -54,7 +56,7 @@ const Portfolio = ({ username }) => {
             <Col key={repo.id} xs="12" sm="12" md="12" lg="3">
               <Link to={`/repo/${repo.id}`}>
                 <Card className="card-custom" color="danger" outline>
-                  <img alt="Sample" src="https://picsum.photos/300/200" />
+                  <img alt="Sample" src="https://picsum.photos/id/1/500/400" />
                   <CardBody>
                     <CardTitle tag="h5">{repo.name}</CardTitle>
                     <CardSubtitle>

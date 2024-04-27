@@ -1,0 +1,13 @@
+ .container-404 {
+    color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* Vertically center the content */
+     align-items: center;
+     /* Horizontally center the content */
+     height: 88vh;
+     /* Set the container height to the viewport height */
+ }
+
+ 

@@ -1,5 +1,5 @@
 body {
-    background-image: url('../public/black.avif');
+    background-image: url('../public/peakpx\ \(10\).jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -16,7 +16,6 @@ body {
     bottom: 0;
     
 }
-
 
 .social-icon {
     margin: 0 15px;

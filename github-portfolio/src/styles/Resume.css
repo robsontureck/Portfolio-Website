@@ -1,3 +1,8 @@
+.resume-container { 
+    align-items: center;
+    min-height: 100vh;
+}
+
 .center-content {
     display: flex;
     align-items: center;
@@ -36,9 +41,7 @@
     object-fit: cover;
     justify-content: center;
     border: 2px solid #333;
-        /* Solid border */
-        box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.1);
-        /* Drop shadow */
+    box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.1);
 }
 
 .resume-title{
@@ -53,21 +56,37 @@
 .skills-container {
     display: flex;
     justify-content: space-around;
-    /* Distribute space evenly around the items */
     flex-wrap: wrap;
-    /* Allow items to wrap in small screens */
     padding: 20px;
-    /* Light grey background */
     margin-top: 20px;
     padding-bottom: 10px;
 }
 
 .skills-container svg {
     margin: 12px;
-    /* Spacing around icons */
     color: #d2c9c9;
-    /* Icon color */
 }
+
+.error-message-resume{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 10px;
+}
+.repos-container-resume {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 50px;
+    justify-content: center;}
+    
+.card-custom-resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
 
 .qualifications{
     margin-top: 50px;
@@ -90,9 +109,8 @@
 
 .card:hover {
     transform: scale(1.05);
-    /* Slightly scale up the card on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: add shadow for better effect */
+    
 }
 
 .equal-height {

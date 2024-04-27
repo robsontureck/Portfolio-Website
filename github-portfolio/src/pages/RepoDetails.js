@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "reactstrap";
-import FetchYoutubeAPI from "../components/fetchYoutubevideos"; // Ensure this is imported correctly
+import FetchYoutubeAPI from "../api/fetchYoutubevideos";
 import { useRepos } from "../context/ReposContext"; // Ensure context is set up correctly
-import "./RepoDetails.css";
+import "../styles/RepoDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -14,13 +14,19 @@ const RepoDetails = () => {
 
   const [videoUrl, setVideoUrl] = useState("");
   const [showVideo, setShowVideo] = useState(false); // Manage video visibility
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleFetchVideo = async () => {
+    // Check if video is not already displayed
     if (!showVideo) {
-      // Check if video is not already displayed
-      const url = await FetchYoutubeAPI(repo.language);
-      setVideoUrl(url);
-      setShowVideo(true); // Show the video
+      const { url, error } = await FetchYoutubeAPI(repo.language);
+      if (error) {
+        setErrorMessage("Failed to fetch video. Please try again later."); // Set the returned error message from the API function
+      } else {
+        setVideoUrl(url);
+        setShowVideo(true);
+        setErrorMessage(""); // Clear any existing error messages when successful
+      }
     } else {
       setShowVideo(false); // Hide the video
       setVideoUrl(""); // Optionally clear the video URL
@@ -34,7 +40,7 @@ const RepoDetails = () => {
       <Row className="align-items-center">
         <Col md="6">
           <img
-            src={repo.image || "https://picsum.photos/300/200"}
+            src={repo.image || "https://picsum.photos/id/1/500/400"}
             alt={repo.name}
             className="img-fluid repo-image"
           />
@@ -47,7 +53,7 @@ const RepoDetails = () => {
             </p>
             <p className="text-center">{repo.description}</p>
             <div className="text-center repo-buttons">
-              <Button color="secondary" href={repo.html_url} target="_blank">
+              <Button color="secondary" href={repo.url} target="_blank">
                 <FontAwesomeIcon icon={faGithub} /> Source Code
               </Button>
               <Button
@@ -55,9 +61,17 @@ const RepoDetails = () => {
                 onClick={handleFetchVideo}
                 className="ms-2"
               >
-                {showVideo ? "Close Tutorial" : "Load Tutorial"}
+                {showVideo
+                  ? "Close Video"
+                  : "Load a video about the language used"}
               </Button>
             </div>
+            {errorMessage && (
+              <p className="error-message-details text-center">
+                {errorMessage}
+              </p>
+            )}{" "}
+            {/* Display error message if it exists */}
             {videoUrl && (
               <div className="text-center mt-3 repo-video">
                 <iframe
